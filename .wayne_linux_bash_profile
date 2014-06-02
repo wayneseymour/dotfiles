@@ -1,0 +1,39 @@
+alias c=pushd
+alias d=popd
+alias cdev='c /c/dev'
+alias h=history
+alias l=ls
+alias cl=clear
+alias ll='ls -la'
+alias ea='c ~ > /dev/null; vi .bashrc; d > /dev/null'
+alias rs='c ~ > /dev/null; . .bashrc; d > /dev/null'
+
+alias gb='git branch'
+alias gs='cl; git status'
+
+function showMySetup() {
+  echo "  ### Running showMySetup()"
+  echo ""
+
+  echo "OS:        `uname`"
+  echo "node -v:   `node -v`"
+  echo "npm -v:    `npm -v`"
+
+}
+alias sms=showMySetup
+
+function env() {
+  echo "  ### Running env()"
+  echo
+
+  echo "  ### PATH === ..."
+  echo $PATH | tr ':' '\12'
+}
+env # run env()
+
+
+
+echo ""
+echo "    ### .bashrc ran"
+
+set -o vi
