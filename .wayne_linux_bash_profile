@@ -5,11 +5,21 @@ alias h=history
 alias l=ls
 alias cl=clear
 alias ll='ls -la'
-alias ea='c ~ > /dev/null; vim .bashrc; d > /dev/null'
-alias rs='c ~ > /dev/null; . .bashrc; d > /dev/null'
+alias ea='c ~ > /dev/null; vim ~/dotfiles/.wayne_linux_bash_profile; d > /dev/null'
+alias rs='c ~ > /dev/null; . ~/dotfiles/.wayne_linux_bash_profile; d > /dev/null'
 
 alias gb='git branch'
 alias gs='cl; git status'
+
+#export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+#export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$ "
+#export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\] \[\033[33;1m\]\w\[\033[m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$ "
+#export PS1="\[$(tput bold)\]\[$(tput setaf 5)\]\u\[$(tput sgr0)\] @\[\033[32m\] \[\033[33;1m\]\w\[\033[m\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)) \$ "
+# Custom bash prompt via kirsle.net/wizards/ps1.html
+# export PS1="\[$(tput bold)\]\[$(tput setaf 7)\]\u\[$(tput setaf 4)\]@\[$(tput setaf 1)\]\w\[$(tput setaf 3)\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2))\[$(tput sgr0)\] \$ "
+export PS1="\[$(tput bold)\]\[$(tput setaf 4)\]\u\[$(tput sgr0)\]\[$(tput setaf 4)\]@\[$(tput setaf 1)\] \w\[$(tput setaf 3)\] (\$(git branch 2>/dev/null | grep '^*' | colrm 1 2))\[$(tput sgr0)\] \$ "
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
 
 function showMySetup() {
   echo "  ### Running showMySetup()"
@@ -34,6 +44,6 @@ env # run env()
 
 
 echo ""
-echo "    ### .bashrc ran"
+echo "    ### Bash Profile Reloaded" 
 
 set -o vi
