@@ -5,7 +5,7 @@ alias h=history
 alias l=ls
 alias cl=clear
 alias ll='ls -la'
-alias ea='c ~ > /dev/null; vi .bashrc; d > /dev/null'
+alias ea='c ~ > /dev/null; vim .bashrc; d > /dev/null'
 alias rs='c ~ > /dev/null; . .bashrc; d > /dev/null'
 
 alias gb='git branch'
